@@ -61,7 +61,7 @@ To find the Idx go to your Domoticz Url and click on Setup > Devices. This will 
 ## Use with Ifttt
 Create an applet with an 'If' of Google assistant, Alexa, or whatever you like.
 Set up the 'That' to be pushbullet (make sure that you connect with the same credentials that you got your Auth token with).
-Using the format mentioned above, push a note with the text such as '#command On 14'
+Using the format mentioned above, push a note with the title e.g. 'Turn on Lamp' and the message as '#command On 14'
 
 ## Test that everything works
 Run the following command and then send a push e.g. #command On 14
