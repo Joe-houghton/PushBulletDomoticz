@@ -19,7 +19,7 @@ sudo apt-get install python-pip git
 ```
 Now pip is installed, lets install the fantastic Pushbullet.py library, (using pip installs all the required libraries automatically):
 ```
-pip install pushbullet.py
+sudo pip install pushbullet.py
 ```
 Now lets copy this project, ready for configuring:
 ```
@@ -81,4 +81,4 @@ Add the following to the bottom (before exit 0)
 python /home/pi/scripts/PushBulletDomoticz/PBDomoticz.py  > /home/pi/logs/pushbullet.log 2>&1
 ```
 
-done!
+reboot - test - done!
