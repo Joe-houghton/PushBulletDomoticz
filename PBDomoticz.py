@@ -15,7 +15,7 @@ HTTP_PROXY_PORT = None
 
 DOMOTICZ_USER = ''
 DOMOTICZ_PASS = ''
-DOMOTICZ_IP = '192.168.0.1:8080'
+DOMOTICZ_ADDRESS = 'http://192.168.0.1:8080'
 
 #CONFIG END
 
@@ -24,7 +24,7 @@ pb = None
 def sendCommand(command, device):
     jsonString = '/json.htm?type=command&param=switchlight&idx='
     switchCommand = '&switchcmd='
-    seq = ('http://', DOMOTICZ_IP, jsonString, device, switchCommand, command)
+    seq = (DOMOTICZ_ADDRESS, jsonString, device, switchCommand, command)
     blankString = ''
     url = blankString.join(seq)
     print(url, '\n')
