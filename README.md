@@ -56,6 +56,13 @@ And to turn it off
 ```
 #command Off 14
 ```
+Other commands available are:
+```
+#commandToScene On 2
+#commandByName Off Main Light
+#commandByName On Evening Lighting
+```
+Note: The #commandByName matches the text with your device and scene names.
 To find the Idx go to your Domoticz Url and click on Setup > Devices. This will give you a table of devices that you have set up along with their Idx's. 
 
 ## Use with Ifttt
