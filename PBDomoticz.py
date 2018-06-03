@@ -32,10 +32,11 @@ def populateUsingURL(url, deviceType):
         print("Bad Request")
         return None
     jsonDevices = response.json()
-    devices = jsonDevices["result"]
-    for device in devices:
-        tempDevice = DomoticzDevice(device["Name"], device["idx"], deviceType)
-        devicesAndScenes.append(tempDevice)
+    if "result" in jsonDevices:
+        devices = jsonDevices["result"]
+        for device in devices:
+            tempDevice = DomoticzDevice(device["Name"], device["idx"], deviceType)
+            devicesAndScenes.append(tempDevice)
 
 def populateDevicesAndScenes():
     devicesAndScenes = []
@@ -134,13 +135,14 @@ def on_push(data):
 
 def main():
     global pb
-    print('got this far')
+    print('Initialising')
     pb = Pushbullet(API_KEY)
-    print('got a pb instance')
+    print('PB instance Created')
     s = Listener(account=pb,
                  on_push=on_push,
                  http_proxy_host=HTTP_PROXY_HOST,
                  http_proxy_port=HTTP_PROXY_PORT)
+    print('Listening for pushes')
     pb.delete_pushes() #lets delete any pushes  that we already have so they do not trigger now
     try:
         s.run_forever()
