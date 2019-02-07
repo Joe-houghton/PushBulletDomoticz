@@ -22,6 +22,7 @@ Now pip is installed, lets install the fantastic Pushbullet.py library, (using p
 sudo pip install pushbullet.py
 ```
 If you are interested then the library that I am using is at https://github.com/rbrcsk/pushbullet.py 
+
 Now lets copy this project, ready for configuring:
 ```
 cd ~/
